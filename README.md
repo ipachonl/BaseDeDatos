@@ -120,7 +120,7 @@ $$
 
 **SQL equivalente**:  
 ```sql
-
+SELECT Name, Population FROM city order by Population desc limit 5;
 ```
 
 ![image](https://github.com/user-attachments/assets/7e617628-6c41-45c8-9ebf-23965b54d2b4)
