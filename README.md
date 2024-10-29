@@ -123,6 +123,7 @@ $$
 
 ```
 
+![image](https://github.com/user-attachments/assets/7e617628-6c41-45c8-9ebf-23965b54d2b4)
 
 
 **9. Calcular la población promedio de los países en el continente 'Europe'**
