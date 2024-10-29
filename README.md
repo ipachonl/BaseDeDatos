@@ -136,10 +136,13 @@ $$
 
 **SQL equivalente**:  
 ```sql
+SELECT AVG(Population) 
+FROM country
+WHERE Continent = 'Europe'; 
 
 ```
 
-
+![image](https://github.com/user-attachments/assets/b6f75f3c-84c3-4f2e-aef3-3bc6bcffd383)
 
 **10. Selección de idiomas con más del 10% de la población mundial que los habla**
 
