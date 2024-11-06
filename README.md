@@ -154,10 +154,12 @@ $$
 
 **SQL equivalente**:  
 ```sql
-
+SELECT *  
+FROM CountryLanguage  
+WHERE Percentage > 10 ; 
 ```
 
-
+![image](https://github.com/user-attachments/assets/1b6d20c9-e31a-4bf2-90ae-67c59a65ab0e)
 
 ## Consultas de Nivel Medio
 
