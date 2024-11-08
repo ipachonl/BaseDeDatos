@@ -173,8 +173,14 @@ $$
 
 **SQL equivalente**:  
 ```sql
-
+SELECT Continent, Name, Population FROM country AS c
+WHERE Population = (SELECT MAX(Population)
+    FROM country
+    WHERE Continent = c.Continent)
+ORDER BY Population DESC LIMIT 5;
 ```
+
+![image](https://github.com/user-attachments/assets/5a76f296-a4b2-47c7-99ec-215b9f071d98)
 
 **2. Listar países que usan más de un idioma**
 
@@ -186,8 +192,19 @@ $$
 
 **SQL equivalente**:  
 ```sql
-
+SELECT c.Name AS CountryName, cl.Language
+FROM country c
+JOIN countrylanguage cl ON c.Code = cl.CountryCode
+WHERE c.Code IN (
+    SELECT CountryCode
+    FROM countrylanguage
+    GROUP BY CountryCode
+    HAVING COUNT(Language) > 1
+);
 ```
+
+![image](https://github.com/user-attachments/assets/f100e74a-8899-4631-a480-1d4e79a5e25b)
+
 
 **3. Calcular el total de población de cada continente**
 
